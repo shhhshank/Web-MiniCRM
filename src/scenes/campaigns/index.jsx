@@ -49,6 +49,13 @@ const Campaigns = () => {
       align: "left",
     },
     {
+      field: "pending",
+      headerName: "Pending",
+      type: "number",
+      headerAlign: "left",
+      align: "left",
+    },
+    {
       field: "createdAt",
       headerName: "Created At",
       headerAlign: "left",
@@ -81,7 +88,7 @@ const Campaigns = () => {
 
   const getCampaigns = async () => {
     const campaigns = await CampaignApi.getCampaigns()
-    setCampaigns(campaigns.data.map((value) => ({ id: value._id, ...value })))
+    setCampaigns(campaigns.data.map((value) => ({ id: value._id, pending: (parseInt(value.audienceSize) - (parseInt(value.sent) + parseInt(value.failed))), ...value })))
   }
 
   const executeCampaign = async (campaign) => {
@@ -97,6 +104,10 @@ const Campaigns = () => {
         subtitle="Previously executed campaigns"
       />
       <Box display="flex" justifyContent="end" mt="20px">
+        <Button type="button" color="primary" variant="contained" onClick={getCampaigns}>
+          Refresh
+        </Button>
+
         <Button type="submit" color="secondary" variant="contained" onClick={handleCreateNew}>
           Create New Campaign
         </Button>

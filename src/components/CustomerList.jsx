@@ -37,7 +37,7 @@ const CustomerList = ({ customers }) => {
         },
         {
             field: "lastVisit",
-            headerName: "Last Visits",
+            headerName: "Last Visit",
             flex: 1,
         },
     ];

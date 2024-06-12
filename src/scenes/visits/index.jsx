@@ -43,6 +43,9 @@ const Visits = () => {
                 subtitle="List of all visits"
             />
             <Box display="flex" justifyContent="end" mt="20px">
+                <Button type="button" color="primary" variant="contained" onClick={getVisits}>
+                    Refresh
+                </Button>
                 <Button type="submit" color="secondary" variant="contained" onClick={handleCreateNew}>
                     Create New Visit
                 </Button>

@@ -44,6 +44,9 @@ const Orders = () => {
                 subtitle="List of all orders"
             />
             <Box display="flex" justifyContent="end" mt="20px">
+                <Button type="button" color="primary" variant="contained" onClick={getOrders}>
+                    Refresh
+                </Button>
                 <Button type="submit" color="secondary" variant="contained" onClick={handleCreateNew}>
                     Create New Order
                 </Button>
