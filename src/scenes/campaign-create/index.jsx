@@ -172,7 +172,7 @@ const CampaignCreate = () => {
                                             fullWidth
                                             variant="filled"
                                             type="text"
-                                            label="Message (Hint: Use placeholder such as %name% %email% %age%)"
+                                            label="Message (Hint: You can use %name% as placeholder)"
                                             onBlur={handleBlur}
                                             onChange={handleChange}
                                             value={values.message}

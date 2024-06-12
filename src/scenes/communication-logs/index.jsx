@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
@@ -42,9 +42,14 @@ const CommunicationLogs = () => {
     return (
         <Box m="20px">
             <Header
-                title="CAMPAIGNS"
-                subtitle="Previously executed campaigns"
+                title="COMMUNICATION LOGS"
+                subtitle="Previously sent logs"
             />
+            <Box display="flex" justifyContent="end" mt="20px">
+                <Button type="button" color="primary" variant="contained" onClick={getCommunicationLogs}>
+                    Refresh
+                </Button>
+            </Box>
             <Box
                 m="40px 0 0 0"
                 height="75vh"

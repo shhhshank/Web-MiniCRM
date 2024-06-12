@@ -46,6 +46,9 @@ const Customers = () => {
                 subtitle="List of all customers"
             />
             <Box display="flex" justifyContent="end" mt="20px">
+                <Button type="button" color="primary" variant="contained" onClick={getCustomers}>
+                    Refresh
+                </Button>
                 <Button type="submit" color="secondary" variant="contained" onClick={handleCreateNew}>
                     Create New Customer
                 </Button>
