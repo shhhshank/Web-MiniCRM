@@ -1,4 +1,4 @@
-import { Box, useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 
 const Dashboard = () => {
@@ -7,7 +7,9 @@ const Dashboard = () => {
 
   return (
     <Box m="20px">
-
+      <Typography variant="h2" color={colors.greenAccent[400]}>
+        {"👈 Press Menu Items to Begin"}
+      </Typography>
     </Box>
   );
 };
